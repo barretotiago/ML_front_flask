@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Previsão de desfecho</h1>
+
+    <form action="/verificar" method="POST">
+        <label for="Tipo do caso conf">Caso confirmado?</label>
+        <input type="number" name="Tipo do caso conf">
+
+        <label for="Tipo do caso desc">Caso descartado?</label>
+        <input type="number" name="Tipo do caso desc">
+
+        <label for="Tipo do caso susp">Caso suspeito?</label>
+        <input type="number" name="Tipo do caso susp">
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade">
+
+        <label for="iot">Intubado?</label>
+        <input type="number" name="iot">
+
+        <label for="leito solicitado">Leito Solicitado</label>
+        <input type="number" name="leito solicitado">
+
+        <label for="leito entrada">Leito Entrada</label>
+        <input type="number" name="leito entrada">
+
+        <label for="leito saida">Leito Saida</label>
+        <input type="number" name="leito saida">
+
+        <label for="tempo internacao">Tempo internação</label>
+        <input type="number" name="tempo internacao">
+
+        <input type="submit" value="Analisar">
+
+    </form>
+
+    {% if classe %}
+        <h2>Resultado da Previsão: {{ classe }}</h2>
+    {% endif %}
+</body>
+</html>
